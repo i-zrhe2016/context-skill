@@ -2,6 +2,20 @@
 
 `context-efficiency` 是一个 Codex skill，用于在长时间编码、检索和调试任务中减少无关上下文，同时保留用户约束、关键证据和可继续执行的状态。
 
+仓库地址：[github.com/i-zrhe2016/context-skill](https://github.com/i-zrhe2016/context-skill)（公开仓库）。
+
+## 安装
+
+使用 Codex 自带的 GitHub 安装器：
+
+```bash
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --repo i-zrhe2016/context-skill \
+  --path context-efficiency
+```
+
+默认安装到 `${CODEX_HOME:-$HOME/.codex}/skills/context-efficiency`。安装完成后新开一轮 Codex，再使用 `$context-efficiency` 调用。
+
 ## 文档索引
 
 - [使用与设计说明](docs/context-efficiency.md)

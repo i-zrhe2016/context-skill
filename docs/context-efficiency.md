@@ -6,6 +6,20 @@
 
 它优化的是任务推进过程，不是把用户要求的交付内容强行截短。用户明确要求完整文件、日志、差异或逐字内容时，应优先满足该要求。
 
+## 安装与调用
+
+本 skill 位于公开仓库：[i-zrhe2016/context-skill](https://github.com/i-zrhe2016/context-skill)。在 Codex CLI 中运行内置安装器：
+
+```bash
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
+  --repo i-zrhe2016/context-skill \
+  --path context-efficiency
+```
+
+安装器默认写入 `${CODEX_HOME:-$HOME/.codex}/skills/context-efficiency`。如果设置了 `CODEX_HOME`，路径会随之变化。安装完成后新开一轮 Codex，并在任务中使用 `$context-efficiency`；自动调用保持开启。
+
+如果目标目录已经存在，安装器会停止以避免覆盖已有 skill。需要更新时，先确认目录内容属于该 skill，再按本机维护流程替换，或指定其他 `--dest` 目录进行测试。
+
 ## 何时使用
 
 适合以下场景：
